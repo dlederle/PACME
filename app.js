@@ -34,7 +34,7 @@ var articleProvider = new ArticleProvider('localhost', 27017);
 
 app.get('/', function(req, res) {
 	res.render('index.jade', { locals: {
-			title: 'PACME Ultimate'
+			title: 'Home'
 		}
 	});
 });
@@ -73,7 +73,7 @@ app.get('/rosters', function(req, res) {
 app.get('/blog', function(req, res) {
 	articleProvider.findAll(function(error, docs){
 		res.render('blog.jade', { locals: {
-				title: 'Blog | PACME Ultimate',
+				title: 'Blog',
 				articles:docs
 				}
 		});
