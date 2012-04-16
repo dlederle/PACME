@@ -15,58 +15,47 @@ h1 {
   text-shadow: 1px 2px 2px #ddd;
   font-size: 60px;
 }
-#logo,
-float: left,
+#logo {
+  margin: 0;
+  float: left;
+}
+#nav {
+  float: left;
+  text-align: right;
+  margin-right: auto;
+}
 #articles {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
   width: 320px;
 }
-#logo .article,
-float: left .article,
 #articles .article {
   margin: 20px;
 }
-#logo .article .created_at,
-float: left .article .created_at,
 #articles .article .created_at {
   display: none;
 }
-#logo .article .title,
-float: left .article .title,
 #articles .article .title {
   font-weight: bold;
   text-decoration: underline;
   background-color: #eee;
 }
-#logo .article .body,
-float: left .article .body,
 #articles .article .body {
   background-color: #ffa;
 }
-#logo .article .created_at,
-float: left .article .created_at,
 #articles .article .created_at {
   display: none;
 }
-#logo .article input[type =text],
-float: left .article input[type =text],
 #articles .article input[type =text] {
   width: 490px;
   margin-left: 16px;
 }
-#logo .article input[type =button],
-float: left .article input[type =button],
 #articles .article input[type =button],
-#logo .article input[type =submit],
-float: left .article input[type =submit],
 #articles .article input[type =submit] {
   text-align: left;
   margin-left: 440px;
 }
-#logo .article textarea,
-float: left .article textarea,
 #articles .article textarea {
   width: 490px;
   height: 90px;
