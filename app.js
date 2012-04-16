@@ -39,6 +39,37 @@ app.get('/', function(req, res) {
 	});
 });
 
+app.get('/about', function(req, res) {
+  res.render('about.jade', { locals: {
+      title: 'About'
+    }
+  });
+});
+
+app.get('/tryouts2012', function(req, res) {
+  res.render('tryouts2012.jade', { locals: {
+      title: '2012 Tryouts'
+    }
+  });
+});
+
+app.get('/media', function(req, res) {
+  res.render('media.jade', { locals: {
+      title: 'Media'
+    }
+  });
+});
+
+app.get('/rosters', function(req, res) {
+  res.render('rosters.jade', { locals: {
+      title: 'rosters'
+    }
+  });
+});
+
+
+
+
 app.get('/blog', function(req, res) {
 	articleProvider.findAll(function(error, docs){
 		res.render('blog.jade', { locals: {
@@ -85,6 +116,7 @@ app.post('/blog/addComment', function(req, res) {
 				res.redirect('/blog/' + req.param('_id'))
 		});
 });
+
 
 app.listen(3000);
 console.log("express server listening on port %d in %s mode", app.address().port, app.settings.env);

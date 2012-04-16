@@ -15,30 +15,6 @@ h1 {
   text-shadow: 1px 2px 2px #ddd;
   font-size: 60px;
 }
-.container-fluid {
-  margin-top: 10px;
-}
-
-#blurb {
-  border: 1px solid black;
-}
-
-#events {
-  border: 1px solid black;
-}
-
-#news {
-  text-align: left;
-}
-
-.nav {
-  text-align: right;
-  float:left;
-}
-.topbar img {
-  float:left;
-}
-
 #articles {
   text-align: left;
   margin-left: auto;
