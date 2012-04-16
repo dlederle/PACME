@@ -62,7 +62,7 @@ app.get('/media', function(req, res) {
 
 app.get('/rosters', function(req, res) {
   res.render('rosters.jade', { locals: {
-      title: 'rosters'
+      title: 'Rosters'
     }
   });
 });
