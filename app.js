@@ -33,9 +33,12 @@ var articleProvider = new ArticleProvider('localhost', 27017);
 // Routes
 
 app.get('/', function(req, res) {
+  articleProvider.findAll(function(error, docs){
 	res.render('index.jade', { locals: {
-			title: 'Home'
-		}
+	  title: 'Home',
+		articles:docs
+		  }
+		});
 	});
 });
 
@@ -67,26 +70,6 @@ app.get('/rosters', function(req, res) {
   });
 });
 
-
-
-
-app.get('/blog', function(req, res) {
-	articleProvider.findAll(function(error, docs){
-		res.render('blog.jade', { locals: {
-				title: 'Blog',
-				articles:docs
-				}
-		});
-	})
-});
-
-app.get('/blog/new', function(req, res) {
-		res.render('blog_new.jade', { locals: {
-				title: 'New Post'
-		}
-	});
-});
-
 app.post('/blog/new', function(req, res) {
 		articleProvider.save({
 				title: req.param('title'),
@@ -96,6 +79,26 @@ app.post('/blog/new', function(req, res) {
 		});
 });
 
+app.get('/blog/new', function(req, res) {
+		res.render('blog_new.jade', { locals: {
+				title: 'New Post'
+		}
+	});
+});
+
+
+/*
+ * Old stuff from the original tutorial
+ *
+app.get('/blog', function(req, res) {
+	articleProvider.findAll(function(error, docs){
+		res.render('blog.jade', { locals: {
+				title: 'Blog',
+				articles:docs
+				}
+		});
+	})
+});
 app.get('/blog/:id', function(req, res) {
 	articleProvider.findById(req.params.id, function(error, article) {
 		res.render('blog_show.jade',
@@ -107,7 +110,7 @@ app.get('/blog/:id', function(req, res) {
 	});
 });
 
-app.post('/blog/addComment', function(req, res) {
+app.post('/blog/:id/addComment', function(req, res) {
 		articleProvider.addCommentToArticle(req.param('_id'), {
 				person: req.param('person'),
 				comment: req.param('comment'),
@@ -117,6 +120,7 @@ app.post('/blog/addComment', function(req, res) {
 		});
 });
 
+*/
 
 app.listen(3000);
 console.log("express server listening on port %d in %s mode", app.address().port, app.settings.env);
