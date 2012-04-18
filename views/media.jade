@@ -2,8 +2,9 @@ include topbar
 div.container-fluid
   div.row-fluid
       div.span8
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js")
-        script(src="/Slides/source/slides.min.jquery.js)
+        script(src='javascripts/jquery.min.js')
+        script(src='javascripts/jquery.easing.1.3.js')
+        script(src='javascripts/slides.min.jquery.js')
         script(type='text/javascript')
           $(function(){$('#slides').slides({
             width: 700,
@@ -12,12 +13,24 @@ div.container-fluid
             container: 'slides_container',
             play: 5000,
             pause: 2500,
-            hoverPause: true
+            hoverPause: true,
+            start: 1
             });
           });
-        div#slides
+        div#slides.span12
+          h1 Photos from Summer 2011
           div.slides_container
             div
-              img(src='/images/slideshow/teampic.jpg')
+              img(src='/images/slideshow/teampic.jpg', height=500, width=700)
             div
-              img(src='/images/slideshow/DSC_3270.JPG')
+              img(src='/images/slideshow/DSC_3270.JPG', height=500, width=700)
+            div
+              img(src='/images/slideshow/DSC_3598.JPG', height=500, width=700)
+            div
+              img(src='/images/slideshow/DSC_3810.JPG', height=500, width=700)
+            div
+              img(src='/images/slideshow/DSC_3497.JPG', height=500, width=700)
+            div
+              img(src='/images/slideshow/DSC_3628.JPG', height=500, width=700)
+        hr
+        h1 Video from Summer 2011
