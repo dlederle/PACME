@@ -1,0 +1,23 @@
+include topbar
+div.container-fluid
+  div.row-fluid
+      div.span8
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js")
+        script(src="/Slides/source/slides.min.jquery.js)
+        script(type='text/javascript')
+          $(function(){$('#slides').slides({
+            width: 700,
+            height: 500,
+            preload: true,
+            container: 'slides_container',
+            play: 5000,
+            pause: 2500,
+            hoverPause: true
+            });
+          });
+        div#slides
+          div.slides_container
+            div
+              img(src='/images/slideshow/teampic.jpg')
+            div
+              img(src='/images/slideshow/DSC_3270.JPG')
