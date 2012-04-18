@@ -56,7 +56,6 @@ h1 {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 320px;
 }
 #articles .article {
   margin: 20px;
@@ -67,10 +66,6 @@ h1 {
 #articles .article .title {
   font-weight: bold;
   text-decoration: underline;
-  background-color: #eee;
-}
-#articles .article .body {
-  background-color: #ffa;
 }
 #articles .article .created_at {
   display: none;
