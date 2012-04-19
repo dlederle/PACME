@@ -38,6 +38,15 @@ h1 {
   -webkit-border-radius: 20px;
   border: 1px solid #000;
 }
+#footer,
+text-align center,
+width 580px,
+margin-top 9px,
+padding 5px018px,
+border-top 1pxsolid #dfdfdf,
+#footer p,
+margin 5px0,
+font-size 1em,
 #nav {
   float: left;
   text-align: right;
